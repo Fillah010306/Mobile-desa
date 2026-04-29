@@ -11,12 +11,13 @@
     android:padding="12dp">
 
     <ImageView
+
         android:id="@+id/ivServiceIcon"
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:layout_marginEnd="12dp"
         android:src="@android:drawable/ic_menu_edit"
-        app:tint="@color/ios_blue" />
+        app:tint="#2760DE" />
 
     <TextView
         android:id="@+id/tvServiceName"
