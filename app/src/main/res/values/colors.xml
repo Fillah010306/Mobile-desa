@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#0F172A</color>
+    <color name="white">#FFFFFF</color>
+
+    <!-- Professional Blue Palette -->
+    <color name="primary">#2563EB</color>
+    <color name="primary_dark">#1E40AF</color>
+    <color name="primary_light">#DBEAFE</color>
+    <color name="accent">#3B82F6</color>
+
+    <!-- Neutral Colors -->
+    <color name="bg_main">#F8FAFC</color>
+    <color name="text_primary">#0F172A</color>
+    <color name="text_secondary">#64748B</color>
+    <color name="border_color">#E2E8F0</color>
+
+    <!-- Functional -->
+    <color name="error">#EF4444</color>
+    <color name="success">#22C55E</color>
+    <color name="warning">#F59E0B</color>
+
+    <!-- Legacy / Compatibility -->
+    <color name="ios_blue">#2563EB</color>
+    <color name="ios_gray">#94A3B8</color>
+    <color name="ios_light_gray">#F1F5F9</color>
+    <color name="ios_system_bg">#F8FAFC</color>
+    <color name="ios_card_bg">#FFFFFF</color>
+    <color name="ios_text_primary">#0F172A</color>
+    <color name="ios_text_secondary">#64748B</color>
+</resources>
