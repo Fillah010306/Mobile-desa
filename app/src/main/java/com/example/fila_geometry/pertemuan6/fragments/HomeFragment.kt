@@ -84,6 +84,16 @@ class HomeFragment : Fragment() {
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
         }
+
+        // 4. Aksi Buka WebView (Website)
+        val openWebView = View.OnClickListener {
+            val intent = Intent(requireContext(), WebViewActivity::class.java)
+            intent.putExtra("url", "http://fila-2sic.alwaysdata.net/")
+            startActivity(intent)
+        }
+        binding.cardInfoPublik.setOnClickListener(openWebView)
+        binding.btnGoToWeb.setOnClickListener(openWebView)
+        binding.cardWebPortal.setOnClickListener(openWebView)
     }
 
     private fun openInputActivity(serviceName: String) {
