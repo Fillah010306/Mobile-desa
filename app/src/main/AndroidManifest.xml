@@ -26,7 +26,8 @@
         <activity android:name=".pertemuan6.ui.MainActivity" />
         <activity android:name=".pertemuan6.ui.WebViewActivity" />
         <activity android:name=".pertemuan6.ui.InputDataActivity" />
-        <activity android:name=".pertemuan7.DetailKependudukanActivity" />
+        <activity android:name=".pertemuan6.ui.RegistrationActivity" />
+        <activity android:name=".pertemuan6.ui.VerificationActivity" />
 
     </application>
 </manifest>

@@ -47,5 +47,10 @@ class AuthActivity : AppCompatActivity() {
                 finish()
             }
         }
+
+        binding.tvRegister.setOnClickListener {
+            val intent = Intent(this, RegistrationActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
