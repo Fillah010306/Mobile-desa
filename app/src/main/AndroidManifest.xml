@@ -28,6 +28,7 @@
         <activity android:name=".pertemuan6.ui.InputDataActivity" />
         <activity android:name=".pertemuan6.ui.RegistrationActivity" />
         <activity android:name=".pertemuan6.ui.VerificationActivity" />
+        <activity android:name=".pertemuan9.ui.NinthActivity" />
 
     </application>
 </manifest>

@@ -12,6 +12,8 @@ import com.example.fila_geometry.databinding.FragmentHomeBinding
 import com.example.fila_geometry.pertemuan6.ui.AuthActivity
 import com.example.fila_geometry.pertemuan6.ui.InputDataActivity
 import com.example.fila_geometry.pertemuan6.ui.WebViewActivity
+import com.example.fila_geometry.pertemuan9.fragment.MessageListFragment
+import com.example.fila_geometry.pertemuan9.ui.NinthActivity
 
 class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
@@ -51,7 +53,9 @@ class HomeFragment : Fragment() {
 
         val sharedPref = requireActivity().getSharedPreferences("user_pref", Context.MODE_PRIVATE)
         val username = sharedPref.getString("username", "User")
-        binding.tvUsernameHome.text = username
+        binding.tvUsernameHome.text = if (username.isNullOrBlank()) "Guest" else username
+
+        setupMessageFragment()
 
         // 1. Klik Layanan untuk Input Data
         binding.cardKtp.setOnClickListener { openInputActivity("KTP Digital") }
@@ -94,12 +98,24 @@ class HomeFragment : Fragment() {
         binding.cardInfoPublik.setOnClickListener(openWebView)
         binding.btnGoToWeb.setOnClickListener(openWebView)
         binding.cardWebPortal.setOnClickListener(openWebView)
+
+        // 5. Aksi Pertemuan 9
+        binding.cardPertemuan9.setOnClickListener {
+            val intent = Intent(requireContext(), NinthActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun openInputActivity(serviceName: String) {
         val intent = Intent(requireContext(), InputDataActivity::class.java)
         intent.putExtra("SERVICE_TYPE", serviceName)
         startActivity(intent)
+    }
+
+    private fun setupMessageFragment() {
+        childFragmentManager.beginTransaction()
+            .replace(com.example.fila_geometry.R.id.innerFragmentContainer, MessageListFragment())
+            .commit()
     }
 
     override fun onDestroyView() {

@@ -1,3 +1,48 @@
 <resources>
     <string name="app_name">fila_geometry</string>
+
+    <!-- Ninth Activity Strings -->
+    <string name="ninth_title">Material Pro</string>
+    <string name="ninth_greeting">Good Morning,</string>
+    <string name="ninth_main_title">System Dashboard</string>
+    <string name="ninth_security_portal">Security Portal</string>
+    <string name="ninth_email_hint">Email Address</string>
+    <string name="ninth_access_key_hint">Access Key</string>
+    <string name="ninth_authorize_access">Authorize Access</string>
+    <string name="ninth_workspace_filter">Workspace Filter</string>
+    <string name="ninth_chip_production">Production</string>
+    <string name="ninth_chip_staging">Staging</string>
+    <string name="ninth_chip_development">Development</string>
+    <string name="ninth_system_notepad">System Notepad</string>
+    <string name="ninth_notepad_hint">Type system logs here...</string>
+    <string name="ninth_quick_actions">Quick Actions</string>
+    <string name="ninth_action_logs">Logs</string>
+    <string name="ninth_action_metrics">Metrics</string>
+    <string name="ninth_action_cloud">Cloud</string>
+    <string name="ninth_notification_center">Notification Center</string>
+    <string name="ninth_filter_toast">Filter: %1$s</string>
+    <string name="ninth_message_snackbar">Message from %1$s: %2$s</string>
+
+    <!-- Home Fragment Strings -->
+    <string name="home_greeting">Selamat Datang,</string>
+    <string name="home_service_header">Layanan Utama</string>
+    <string name="home_service_ktp">KTP Digital</string>
+    <string name="home_service_kk">Kartu Keluarga</string>
+    <string name="home_service_akta">Akta Lahir</string>
+    <string name="home_service_pindah">Pindah Domisili</string>
+    <string name="home_last_submission">Pengajuan Terakhir</string>
+    <string name="home_delete_submission">Hapus</string>
+    <string name="home_additional_info">Informasi Tambahan</string>
+    <string name="home_info_publik">Info Publik</string>
+    <string name="home_info_publik_desc">Berita &amp; Pengumuman</string>
+    <string name="home_web_portal">Web Portal</string>
+    <string name="home_web_portal_desc">Kunjungi Website Resmi</string>
+    <string name="home_notif_center">Notification Center</string>
+    <string name="home_logout">Keluar</string>
+    <string name="home_pertemuan9_mod">Module Pertemuan 9</string>
+
+    <!-- Bottom Nav -->
+    <string name="nav_home">Beranda</string>
+    <string name="nav_services">Layanan</string>
+    <string name="nav_profile">Profil</string>
 </resources>
