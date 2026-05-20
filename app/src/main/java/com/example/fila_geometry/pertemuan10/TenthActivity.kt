@@ -23,7 +23,7 @@ class TenthActivity : AppCompatActivity() {
     private fun setupToolbar() {
         setSupportActionBar(binding.toolbar)
         supportActionBar?.apply {
-            title = "Pertemuan 10"
+            title = "Tab Layout"
             setDisplayHomeAsUpEnabled(true)
             setDisplayShowHomeEnabled(true)
         }
@@ -44,14 +44,14 @@ class TenthActivity : AppCompatActivity() {
             // Atur judul, icon, dan badge untuk setiap tab
             when (position) {
                 0 -> {
-                    tab.text = "Tab A"
+                    tab.text = "Identitas"
                     tab.icon = ContextCompat.getDrawable(this, android.R.drawable.ic_dialog_info)
                     // Tambah Badge Tanpa nomor (hanya titik)
                     val badge = tab.getOrCreateBadge()
                     badge.isVisible = true
                 }
                 1 -> {
-                    tab.text = "Tab B"
+                    tab.text = "Kelahiran"
                     tab.icon = ContextCompat.getDrawable(this, android.R.drawable.ic_dialog_email)
                     // Tambah Badge dengan nomor
                     val badge = tab.getOrCreateBadge()
@@ -59,12 +59,12 @@ class TenthActivity : AppCompatActivity() {
                     badge.number = 5
                 }
                 2 -> {
-                    tab.text = "Tab C"
-                    tab.icon = ContextCompat.getDrawable(this, android.R.drawable.ic_menu_gallery)
+                    tab.text = "KK"
+                    tab.icon = ContextCompat.getDrawable(this, android.R.drawable.ic_menu_agenda)
                     // Tambah Badge dengan nomor
                     val badge = tab.getOrCreateBadge()
                     badge.isVisible = true
-                    badge.number = 50
+                    badge.number = 1
                     badge.backgroundColor = ContextCompat.getColor(this, R.color.primary)
                 }
             }

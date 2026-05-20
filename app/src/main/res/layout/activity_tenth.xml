@@ -7,12 +7,22 @@
     android:background="@color/bg_main"
     tools:context=".pertemuan10.TenthActivity">
 
+    <!-- Background Decor -->
+    <View
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="-100dp"
+        android:layout_marginEnd="-50dp"
+        android:background="@drawable/bg_blob_primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
         android:layout_width="0dp"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/white"
-        app:title="Pertemuan 10"
+        android:background="@android:color/transparent"
+        app:title="Portal Warga"
         app:titleTextColor="@color/primary_dark"
         app:navigationIcon="@android:drawable/ic_menu_revert"
         app:navigationIconTint="@color/primary_dark"
@@ -21,17 +31,61 @@
         app:layout_constraintTop_toTopOf="parent"
         app:elevation="0dp" />
 
+    <!-- Population System Header -->
+    <LinearLayout
+        android:id="@+id/headerSistem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="16dp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sistem Kependudukan"
+                android:textColor="@color/primary_dark"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Akses data identitas, kelahiran, dan keluarga dalam satu genggaman."
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp"
+                android:lineSpacingExtra="2dp" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/logo_kependudukan"
+            android:padding="8dp"
+            android:background="@drawable/bg_blob_primary" />
+    </LinearLayout>
+
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/tabCard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         app:cardCornerRadius="16dp"
-        app:cardElevation="2dp"
+        app:cardElevation="4dp"
         app:strokeWidth="1dp"
         app:strokeColor="@color/primary_soft"
-        app:layout_constraintTop_toBottomOf="@id/toolbar">
+        app:layout_constraintTop_toBottomOf="@id/headerSistem">
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tab_layout"
@@ -44,7 +98,8 @@
             app:tabTextColor="@color/text_secondary"
             app:tabIconTint="@color/primary"
             app:tabIndicatorFullWidth="false"
-            app:tabRippleColor="@color/primary_soft" />
+            app:tabRippleColor="@color/primary_soft"
+            app:tabMode="fixed" />
     </com.google.android.material.card.MaterialCardView>
 
     <androidx.viewpager2.widget.ViewPager2

@@ -7,35 +7,40 @@ import com.bumptech.glide.Glide
 import com.example.fila_geometry.databinding.ItemProductBinding
 
 class ProductAdapter(
-    private val productList: List<ProductModel>,
-    private val onItemClick: (ProductModel) -> Unit
+    private val products: List<ProductModel>,
+    private val onBuyClick: (ProductModel) -> Unit
 ) : RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() {
 
-    inner class ProductViewHolder(val binding: ItemProductBinding)
-        : RecyclerView.ViewHolder(binding.root)
+    inner class ProductViewHolder(private val binding: ItemProductBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+
+        fun bind(product: ProductModel) {
+            binding.tvProductName.text = product.name
+            binding.tvProductPrice.text = product.price
+
+            Glide.with(binding.root.context)
+                .load(product.imageUrl)
+                .centerCrop()
+                .into(binding.imgProduct)
+
+            binding.btnBuy.setOnClickListener {
+                onBuyClick(product)
+            }
+        }
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductViewHolder {
         val binding = ItemProductBinding.inflate(
-            LayoutInflater.from(parent.context), parent, false
+            LayoutInflater.from(parent.context),
+            parent,
+            false
         )
         return ProductViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: ProductViewHolder, position: Int) {
-        val item = productList[position]
-        with(holder.binding) {
-            tvProductName.text = item.name
-            tvProductPrice.text = item.price
-
-            Glide.with(holder.itemView.context)
-                .load(item.imageUrl)
-                .into(imgProduct)
-
-            root.setOnClickListener {
-                onItemClick(item)
-            }
-        }
+        holder.bind(products[position])
     }
 
-    override fun getItemCount(): Int = productList.size
+    override fun getItemCount(): Int = products.size
 }
