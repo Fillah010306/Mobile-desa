@@ -55,8 +55,6 @@ class HomeFragment : Fragment() {
         val username = sharedPref.getString("username", "User")
         binding.tvUsernameHome.text = if (username.isNullOrBlank()) "Guest" else username
 
-        setupMessageFragment()
-
         // 1. Klik Layanan untuk Input Data
         binding.cardKtp.setOnClickListener { openInputActivity("KTP Digital") }
         binding.cardKk.setOnClickListener { openInputActivity("Kartu Keluarga") }
@@ -104,18 +102,18 @@ class HomeFragment : Fragment() {
             val intent = Intent(requireContext(), NinthActivity::class.java)
             startActivity(intent)
         }
+
+        // 6. Aksi Pertemuan 10
+        binding.btnPertemuan10.setOnClickListener {
+            val intent = Intent(requireContext(), com.example.fila_geometry.pertemuan10.TenthActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun openInputActivity(serviceName: String) {
         val intent = Intent(requireContext(), InputDataActivity::class.java)
         intent.putExtra("SERVICE_TYPE", serviceName)
         startActivity(intent)
-    }
-
-    private fun setupMessageFragment() {
-        childFragmentManager.beginTransaction()
-            .replace(com.example.fila_geometry.R.id.innerFragmentContainer, MessageListFragment())
-            .commit()
     }
 
     override fun onDestroyView() {

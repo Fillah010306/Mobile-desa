@@ -26,23 +26,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Header Gradient (Can be shared or fragment-specific, keeping here for consistency) -->
+    <!-- Header Gradient -->
     <View
         android:id="@+id/headerBackground"
         android:layout_width="match_parent"
-        android:layout_height="260dp"
+        android:layout_height="220dp"
         android:background="@drawable/bg_auth_gradient"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/ivWave"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:layout_height="100dp"
         android:scaleType="fitXY"
         android:src="@drawable/bg_header_wave"
-        app:layout_constraintBottom_toBottomOf="@id/headerBackground"
         app:layout_constraintTop_toBottomOf="@id/headerBackground"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintBottom_toBottomOf="@id/headerBackground"
         app:tint="@color/bg_main" />
 
     <androidx.appcompat.widget.Toolbar

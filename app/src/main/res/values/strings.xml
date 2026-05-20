@@ -40,6 +40,8 @@
     <string name="home_notif_center">Notification Center</string>
     <string name="home_logout">Keluar</string>
     <string name="home_pertemuan9_mod">Module Pertemuan 9</string>
+    <string name="home_explore_pertemuan10">Explore Pertemuan 10</string>
+    <string name="home_discover_pertemuan10">Discover Tabs &amp; ViewPager2 Implementation</string>
 
     <!-- Bottom Nav -->
     <string name="nav_home">Beranda</string>

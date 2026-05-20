@@ -341,38 +341,6 @@
                 app:chipStrokeColor="@color/primary_light" />
         </com.google.android.material.chip.ChipGroup>
 
-        <!-- Notification Center -->
-        <TextView
-            android:id="@+id/tvNotificationTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:text="@string/home_notif_center"
-            android:textColor="@color/primary_dark"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/chipGroupFilter" />
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cardNotifContainer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            app:cardCornerRadius="24dp"
-            app:cardElevation="2dp"
-            app:strokeWidth="1dp"
-            app:strokeColor="@color/primary_soft"
-            app:layout_constraintTop_toBottomOf="@id/tvNotificationTitle">
-
-            <FrameLayout
-                android:id="@+id/innerFragmentContainer"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:minHeight="200dp"
-                android:padding="4dp" />
-        </com.google.android.material.card.MaterialCardView>
-
         <!-- Additional Info / External Links -->
         <TextView
             android:id="@+id/tvAdditionalInfo"
@@ -384,7 +352,7 @@
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cardNotifContainer" />
+            app:layout_constraintTop_toBottomOf="@id/glServices" />
 
         <LinearLayout
             android:id="@+id/llInfoLinks"
@@ -510,6 +478,20 @@
             app:cornerRadius="16dp"
             app:layout_constraintTop_toBottomOf="@id/llInfoLinks" />
 
+        <!-- Pertemuan 10 Module Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPertemuan10"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="12dp"
+            android:text="Pertemuan 10: Tabs &amp; ViewPager"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/primary_dark"
+            app:cornerRadius="16dp"
+            app:layout_constraintTop_toBottomOf="@id/cardPertemuan9" />
+
         <!-- Logout Button -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnLogout"
@@ -521,7 +503,7 @@
             android:textAllCaps="false"
             android:textSize="16sp"
             android:textColor="@color/error"
-            app:layout_constraintTop_toBottomOf="@id/cardPertemuan9" />
+            app:layout_constraintTop_toBottomOf="@id/btnPertemuan10" />
 
         <!-- Hidden/Legacy IDs for compatibility -->
         <View android:id="@+id/btnGoToWeb" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone" app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"/>
