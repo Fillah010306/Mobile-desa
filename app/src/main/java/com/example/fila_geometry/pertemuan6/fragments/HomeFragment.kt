@@ -8,11 +8,16 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.fila_geometry.data.api.CatFactApiClient
+import com.example.fila_geometry.data.api.PhotoApiClient
+import com.example.fila_geometry.pertemuan6.fragments.photo.PhotoAdapter
+import kotlinx.coroutines.launch
 import com.example.fila_geometry.databinding.FragmentHomeBinding
 import com.example.fila_geometry.pertemuan6.ui.AuthActivity
 import com.example.fila_geometry.pertemuan6.ui.InputDataActivity
 import com.example.fila_geometry.pertemuan6.ui.WebViewActivity
-import com.example.fila_geometry.pertemuan9.fragment.MessageListFragment
 import com.example.fila_geometry.pertemuan9.ui.NinthActivity
 import com.example.fila_geometry.Message.tutorial.TutorialActivity
 
@@ -114,6 +119,38 @@ class HomeFragment : Fragment() {
         binding.btnTutorial.setOnClickListener {
             val intent = Intent(requireContext(), TutorialActivity::class.java)
             startActivity(intent)
+        }
+
+        // 8. Load REST API Data
+        loadCatFact()
+        loadPhoto()
+
+        binding.btnRefresh.setOnClickListener {
+            loadCatFact()
+        }
+    }
+
+    private fun loadCatFact() {
+        lifecycleScope.launch {
+            try {
+                val response = CatFactApiClient.apiService.getCatFact()
+                binding.tvCatFact.text = "\"${response.fact}\""
+            } catch (e: Exception) {
+                binding.tvCatFact.text = "Gagal mengambil fakta kucing."
+            }
+        }
+    }
+
+    private fun loadPhoto() {
+        lifecycleScope.launch {
+            try {
+                val photos = PhotoApiClient.apiService.getPhotos()
+                val adapter = PhotoAdapter(photos)
+                binding.rvGallery.adapter = adapter
+                binding.rvGallery.layoutManager = LinearLayoutManager(requireContext())
+            } catch (e: Exception) {
+                Toast.makeText(requireContext(), "Gagal memuat gambar", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 
