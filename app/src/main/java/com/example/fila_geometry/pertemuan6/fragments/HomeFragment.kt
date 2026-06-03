@@ -14,6 +14,7 @@ import com.example.fila_geometry.pertemuan6.ui.InputDataActivity
 import com.example.fila_geometry.pertemuan6.ui.WebViewActivity
 import com.example.fila_geometry.pertemuan9.fragment.MessageListFragment
 import com.example.fila_geometry.pertemuan9.ui.NinthActivity
+import com.example.fila_geometry.Message.tutorial.TutorialActivity
 
 class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
@@ -106,6 +107,12 @@ class HomeFragment : Fragment() {
         // 6. Aksi Pertemuan 10
         binding.btnPertemuan10.setOnClickListener {
             val intent = Intent(requireContext(), com.example.fila_geometry.pertemuan10.TenthActivity::class.java)
+            startActivity(intent)
+        }
+
+        // 7. Aksi Tutorial
+        binding.btnTutorial.setOnClickListener {
+            val intent = Intent(requireContext(), TutorialActivity::class.java)
             startActivity(intent)
         }
     }

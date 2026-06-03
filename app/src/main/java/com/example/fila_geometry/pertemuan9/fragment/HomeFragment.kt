@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import com.example.fila_geometry.R
 import com.example.fila_geometry.databinding.FragmentNinthHomeBinding
 import com.example.fila_geometry.pertemuan10.TenthActivity
+import com.example.fila_geometry.Message.tutorial.TutorialActivity
 import com.google.android.material.chip.Chip
 
 class HomeFragment : Fragment() {
@@ -39,6 +40,10 @@ class HomeFragment : Fragment() {
     private fun setupNavigation() {
         binding.btnPertemuan10.setOnClickListener {
             val intent = Intent(requireContext(), TenthActivity::class.java)
+            startActivity(intent)
+        }
+        binding.btnTutorial.setOnClickListener {
+            val intent = Intent(requireContext(), TutorialActivity::class.java)
             startActivity(intent)
         }
     }
