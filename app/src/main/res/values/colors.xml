@@ -3,17 +3,26 @@
     <color name="black">#0F172A</color>
     <color name="white">#FFFFFF</color>
 
-    <!-- Ultra Premium Blue Palette -->
-    <color name="primary">#2563EB</color>
+    <!-- Modern Blue & Green Palette -->
+    <!-- Primary Blue -->
+    <color name="primary">#1E40AF</color>
     <color name="primary_dark">#1E3A8A</color>
     <color name="primary_light">#DBEAFE</color>
     <color name="primary_soft">#F0F9FF</color>
-    <color name="accent">#3B82F6</color>
-    <color name="blue_surface">#F0F9FF</color>
 
-    <!-- Gradients -->
-    <color name="grad_start">#3B82F6</color>
-    <color name="grad_end">#1D4ED8</color>
+    <!-- Secondary Green -->
+    <color name="secondary">#059669</color>
+    <color name="secondary_light">#D1FAE5</color>
+    <color name="accent">#10B981</color>
+
+    <!-- Blue & Green Surfaces -->
+    <color name="blue_surface">#F0F9FF</color>
+    <color name="green_surface">#F0FDF4</color>
+
+    <!-- Gradients (Blue to Green) -->
+    <color name="grad_start">#1E40AF</color>
+    <color name="grad_center">#0D9488</color>
+    <color name="grad_end">#059669</color>
 
     <!-- Backgrounds & Surfaces -->
     <color name="bg_main">#F8FAFC</color>
@@ -28,22 +37,28 @@
     <color name="border_color">#E2E8F0</color>
     <color name="error">#EF4444</color>
     <color name="success">#10B981</color>
+    <color name="warning">#F59E0B</color>
 
     <!-- Glassmorphism Effects -->
     <color name="glass_white">#E6FFFFFF</color>
     <color name="glass_blue">#CCDBEAFE</color>
+    <color name="glass_green">#CCD1FAE5</color>
 
     <!-- Blob Colors -->
-    <color name="blob_primary">#202563EB</color>
-    <color name="blob_accent">#150EA5E9</color>
+    <color name="blob_primary">#201E40AF</color>
+    <color name="blob_secondary">#20059669</color>
+    <color name="blob_accent">#1510B981</color>
 
-    <!-- Compatibility/Missing Colors -->
+    <!-- Compatibility & Legacy iOS Styles -->
     <color name="blue_900">#1E3A8A</color>
     <color name="blue_500">#3B82F6</color>
-    <color name="ios_blue">#007AFF</color>
-    <color name="ios_card_bg">#FFFFFF</color>
-    <color name="ios_system_bg">#F2F2F7</color>
-    <color name="ios_text_primary">#000000</color>
-    <color name="ios_text_secondary">#8E8E93</color>
-    <color name="ios_gray">#8E8E93</color>
+    <color name="green_500">#10B981</color>
+
+    <!-- Restoring missing iOS colors used in layouts -->
+    <color name="ios_blue">@color/primary</color>
+    <color name="ios_card_bg">@color/white</color>
+    <color name="ios_system_bg">@color/bg_main</color>
+    <color name="ios_text_primary">@color/text_primary</color>
+    <color name="ios_text_secondary">@color/text_secondary</color>
+    <color name="ios_gray">@color/text_hint</color>
 </resources>

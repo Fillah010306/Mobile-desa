@@ -12,6 +12,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.fila_geometry.data.api.CatFactApiClient
 import com.example.fila_geometry.data.api.PhotoApiClient
+import com.example.fila_geometry.data.api.NewsApiClient
 import com.example.fila_geometry.pertemuan6.fragments.photo.PhotoAdapter
 import kotlinx.coroutines.launch
 import com.example.fila_geometry.databinding.FragmentHomeBinding
@@ -100,7 +101,6 @@ class HomeFragment : Fragment() {
             startActivity(intent)
         }
         binding.cardInfoPublik.setOnClickListener(openWebView)
-        binding.btnGoToWeb.setOnClickListener(openWebView)
         binding.cardWebPortal.setOnClickListener(openWebView)
 
         // 5. Aksi Pertemuan 9
@@ -124,9 +124,11 @@ class HomeFragment : Fragment() {
         // 8. Load REST API Data
         loadCatFact()
         loadPhoto()
+        loadNews()
 
         binding.btnRefresh.setOnClickListener {
             loadCatFact()
+            loadNews()
         }
     }
 
@@ -147,9 +149,22 @@ class HomeFragment : Fragment() {
                 val photos = PhotoApiClient.apiService.getPhotos()
                 val adapter = PhotoAdapter(photos)
                 binding.rvGallery.adapter = adapter
-                binding.rvGallery.layoutManager = LinearLayoutManager(requireContext())
+                binding.rvGallery.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
             } catch (e: Exception) {
                 Toast.makeText(requireContext(), "Gagal memuat gambar", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
+    private fun loadNews() {
+        lifecycleScope.launch {
+            try {
+                val response = NewsApiClient.apiService.getNews()
+                val adapter = NewsAdapter(response.data.posts)
+                binding.rvNews.adapter = adapter
+                binding.rvNews.layoutManager = LinearLayoutManager(requireContext())
+            } catch (e: Exception) {
+                Toast.makeText(requireContext(), "Gagal memuat berita", Toast.LENGTH_SHORT).show()
             }
         }
     }

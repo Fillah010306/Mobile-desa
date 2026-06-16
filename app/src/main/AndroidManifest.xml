@@ -13,14 +13,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Fila_geometry"
-        android:usesCleartextTraffic="true"> <activity
-        android:name=".pertemuan6.ui.SplashScreenActivity"
-        android:exported="true">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-    </activity>
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".pertemuan6.ui.SplashScreenActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".pertemuan6.ui.OnBoardingActivity"
+            android:exported="true" />
 
         <activity android:name=".pertemuan6.ui.AuthActivity" />
         <activity android:name=".pertemuan6.ui.MainActivity" />
@@ -28,6 +33,8 @@
         <activity android:name=".pertemuan6.ui.InputDataActivity" />
         <activity android:name=".pertemuan6.ui.RegistrationActivity" />
         <activity android:name=".pertemuan6.ui.VerificationActivity" />
+        <activity android:name=".pertemuan6.ui.NoteFormActivity" />
+        <activity android:name=".pertemuan6.ui.AspirasiFormActivity" />
         <activity android:name=".pertemuan9.ui.NinthActivity" />
         <activity android:name=".pertemuan10.TenthActivity" />
         <activity android:name=".Message.tutorial.TutorialActivity" />

@@ -1,10 +1,21 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.Fila_geometry" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
+        <!-- Primary brand color. -->
         <item name="colorPrimary">@color/primary</item>
-        <item name="colorSecondary">@color/accent</item>
+        <item name="colorPrimaryVariant">@color/primary_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorSecondaryVariant">@color/accent</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        <!-- Status bar color. -->
         <item name="android:statusBarColor">@color/primary_dark</item>
+
+        <!-- Background/Surface -->
+        <item name="android:windowBackground">@color/bg_main</item>
     </style>
 
     <style name="Theme.Fila_geometry" parent="Base.Theme.Fila_geometry" />

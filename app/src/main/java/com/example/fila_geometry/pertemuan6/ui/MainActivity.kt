@@ -8,6 +8,8 @@ import com.example.fila_geometry.databinding.ActivityMainBinding
 import com.example.fila_geometry.pertemuan6.fragments.HomeFragment
 import com.example.fila_geometry.pertemuan6.fragments.ProfileFragment
 import com.example.fila_geometry.pertemuan6.fragments.ServicesFragment
+import com.example.fila_geometry.pertemuan6.fragments.NoteFragment
+import com.example.fila_geometry.pertemuan6.fragments.AspirasiFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -34,6 +36,14 @@ class MainActivity : AppCompatActivity() {
                 }
                 R.id.nav_services -> {
                     loadFragment(ServicesFragment(), "Layanan")
+                    true
+                }
+                R.id.nav_note -> {
+                    loadFragment(NoteFragment(), "Catatan Desa")
+                    true
+                }
+                R.id.nav_aspirasi -> {
+                    loadFragment(AspirasiFragment(), "Aspirasi Warga")
                     true
                 }
                 R.id.nav_profile -> {

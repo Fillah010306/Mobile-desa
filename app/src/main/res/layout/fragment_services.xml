@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F8FAFC"
+    android:background="@color/bg_main"
     android:clipToPadding="false"
     android:overScrollMode="never">
 
@@ -21,6 +21,16 @@
             android:layout_marginEnd="-50dp"
             android:background="@drawable/bg_blob_primary"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_marginStart="-60dp"
+            android:layout_marginTop="150dp"
+            android:alpha="0.4"
+            android:background="@drawable/bg_blob_secondary"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <!-- Header Section -->
@@ -67,7 +77,7 @@
             android:orientation="vertical"
             app:layout_constraintTop_toBottomOf="@id/tvCategoryTitle">
 
-            <!-- KTP Card -->
+            <!-- KTP Card - Blue Theme -->
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cardLayananKtp"
                 android:layout_width="match_parent"
@@ -124,7 +134,7 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- KK Card -->
+            <!-- KK Card - Green Theme -->
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cardLayananKk"
                 android:layout_width="match_parent"
@@ -133,7 +143,7 @@
                 app:cardCornerRadius="24dp"
                 app:cardElevation="2dp"
                 app:strokeWidth="1dp"
-                app:strokeColor="@color/primary_soft">
+                app:strokeColor="@color/secondary_light">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -145,10 +155,10 @@
                     <ImageView
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:background="@drawable/bg_blob_primary"
+                        android:background="@drawable/bg_blob_secondary"
                         android:padding="12dp"
                         android:src="@drawable/ic_kk"
-                        app:tint="@color/primary" />
+                        app:tint="@color/secondary" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -177,11 +187,11 @@
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:src="@android:drawable/ic_media_next"
-                        app:tint="@color/primary_light" />
+                        app:tint="@color/secondary_light" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Akta Card -->
+            <!-- Akta Card - Green Theme -->
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cardLayananAkta"
                 android:layout_width="match_parent"
@@ -190,7 +200,7 @@
                 app:cardCornerRadius="24dp"
                 app:cardElevation="2dp"
                 app:strokeWidth="1dp"
-                app:strokeColor="@color/primary_soft">
+                app:strokeColor="@color/secondary_light">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -202,10 +212,10 @@
                     <ImageView
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:background="@drawable/bg_blob_primary"
+                        android:background="@drawable/bg_blob_secondary"
                         android:padding="12dp"
                         android:src="@drawable/ic_akta"
-                        app:tint="@color/primary" />
+                        app:tint="@color/secondary" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -234,11 +244,11 @@
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:src="@android:drawable/ic_media_next"
-                        app:tint="@color/primary_light" />
+                        app:tint="@color/secondary_light" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Pindah Card -->
+            <!-- Pindah Card - Blue Theme -->
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cardLayananPindah"
                 android:layout_width="match_parent"
